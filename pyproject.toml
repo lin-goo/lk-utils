@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "lk-utils"
+version = "0.1.0"
+description = ""
+authors = ["liuyulin <liuyulin@liankenet.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+requests = "^2.31.0"
+redis = "^5.0.0"
+django = "^4.2.4"
+numpy = "^1.25.2"
+sqlalchemy = "^2.0.20"
+deepmerge = "^1.1.0"
+xmltodict = "^0.13.0"
+yarl = "^1.9.2"
+dataclasses-json = "^0.5.14"
+six = "^1.16.0"
+wechatpy = {git = "https://e.coding.net/bnt/lianke-server/wechatpy.git", rev = "435d8cb8bb94733bbf0fe84b76522f89bebef4a6"}
+oss2 = "^2.18.1"
+djangorestframework = "^3.14.0"
+pymysql = "^1.1.0"
+pillow = "^10.0.0"
+opencv-python = "^4.8.0.76"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
