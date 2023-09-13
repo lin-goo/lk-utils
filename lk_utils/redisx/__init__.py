@@ -1,10 +1,10 @@
 from functools import wraps
-
 from asgiref.local import Local
-from lk_utils.exceptions.redisx import RedisConnectionDoesNotExist
-from lk_utils.register_config import config
-from lk_utils.register_config import ConfigKeys
+
 from redis import Redis
+from lk_utils.register import config
+from lk_utils.register import ConfigKeys
+from lk_utils.exceptions.redisx import RedisConnectionDoesNotExist
 
 
 class ConnectionManager(object):
@@ -49,7 +49,7 @@ class ConnectionManager(object):
         return iter(self._config)
 
 
-def connection_client(alias):
+def connection_redisx(alias):
     def decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):

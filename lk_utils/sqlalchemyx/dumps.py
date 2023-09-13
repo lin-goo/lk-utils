@@ -25,6 +25,6 @@ def to_dict(instance, fields=None, exclude_fields=None):
         elif isinstance(value, Decimal):
             data[key] = '{0:f}'.format(value)
         else:
-            data[key] = value
+            data[key] = str(value)
 
     return data

@@ -3,7 +3,8 @@ from sqlalchemy import orm
 
 
 class BaseQuery(orm.Query):
-    """SQLAlchemy :class:`~sqlalchemy.orm.query.Query` subclass with convenience methods for querying in a web application.
+    """
+    SQLAlchemy :class:`~sqlalchemy.orm.query.Query` subclass with convenience methods for querying in a web application.
 
     This is the default :attr:`~Model.query` object used for models, and exposed as :attr:`~SQLAlchemy.Query`.
     Override the query class for an individual model by subclassing this and setting :attr:`~Model.query_class`.

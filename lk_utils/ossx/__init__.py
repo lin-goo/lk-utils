@@ -1,6 +1,6 @@
 import oss2
-from lk_utils.register_config import config
-from lk_utils.register_config import ConfigKeys
+from lk_utils.register import config
+from lk_utils.register import ConfigKeys
 
 
 OSS_CONFIG = config[ConfigKeys.OSS]

@@ -68,8 +68,12 @@ class DjangoRegister(BaseRegister):
 class FlaskRegister(BaseRegister):
 
     def set_variable(self):
-        if hasattr(self.kwargs, 'app'):
-            for key, value in self.kwargs['app'].__dict__.items():
-                setattr(context, key, value)
+        app = self.kwargs.get('app')
+        app_keys = dir(app) if app else []
+        for key in app_keys:
+            value = getattr(app, key)
+            if callable(value):
+                continue
+            setattr(context, key, value)
 
         super().set_variable()

@@ -1,4 +1,4 @@
-from lk_utils.register_config import context
+from lk_utils.register import context
 
 
 def update_or_add_instance(model, instance, kvs, update_fields=None):
